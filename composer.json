@@ -1,0 +1,54 @@
+{
+    "name": "simonroberts881/a-sample-package",
+    "description": "A simple example",
+    "keywords": [
+        "simonroberts881",
+        "a-sample-package"
+    ],
+    "homepage": "https://github.com/simonroberts881/a-sample-package",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Simon Roberts",
+            "email": "simon@bigboffin.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "5.8.*"
+    },
+    "require-dev": {
+        "orchestra/testbench": "3.8.*",
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Simonroberts881\\ASamplePackage\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Simonroberts881\\ASamplePackage\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Simonroberts881\\ASamplePackage\\ASamplePackageServiceProvider"
+            ],
+            "aliases": {
+                "ASamplePackage": "Simonroberts881\\ASamplePackage\\ASamplePackageFacade"
+            }
+        }
+    }
+}
